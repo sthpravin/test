@@ -36,6 +36,9 @@
   <div class="panel-body">
     	<h3><%= idea.description %></h3>
     	<h4 class="pull-right"><%= idea.author %></h4>	
+    	<br>
+    	<%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm pull-left', data: {confirm: "Are you sure?"} %>
+      <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm pull-left' %>
   </div>
 </div>	
 <% end %>

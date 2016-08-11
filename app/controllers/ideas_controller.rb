@@ -27,6 +27,12 @@ class IdeasController < ApplicationController
     		redirect_to edit_idea_path(params[:id])
   		end
 	end
+	
+	def destroy
+	  @idea = Idea.find(params[:id])
+  	@idea.destroy
+  	redirect_to root_path
+	end
 
 end
 
