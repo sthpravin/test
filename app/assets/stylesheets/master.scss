@@ -19,12 +19,21 @@ body{
 	background-color:#f5f5f5;
 }
 .navbar-brand {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Fascinate', cursive;
   font-weight: 100;
-	letter-spacing: 8px;
+	letter-spacing: 12px;
 	font-size: 30px;
+}
+.headline{
+	color: red;
 }
 
 .navbar-default{
 	background-color:white;
+}
+
+.panel-body{
+	background: #AAB3AE;
+	
+	border-radius:15px;
 }

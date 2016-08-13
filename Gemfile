@@ -7,6 +7,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 #simple form
 gem 'simple_form'
+#pagination
+gem 'will_paginate', '~> 3.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
