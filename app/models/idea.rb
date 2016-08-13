@@ -1,3 +1,3 @@
 class Idea < ActiveRecord::Base
-	validates :description, :author, presence: true
+	validates :description, :author, :title, presence: true
 end

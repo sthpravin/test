@@ -11,6 +11,7 @@
 
       <div class="modal-body">
       <%= simple_form_for Idea.new do |f| %>
+      	<%= f.input :title %>  
 		<%= f.input :description %>
 		<%= f.input :author %>  
       </div>
@@ -29,8 +30,9 @@
 <% @ideas.each do |idea| %>
 <div class="panel panel-default" >
   <div class="panel-body" >
-    	<h3 ><%= idea.description %></h3>
-    	<h4 class="pull-right" ><%= idea.author %></h4>	
+  		<h1><%=  idea.title %></h1>
+    	<h3 ><%= simple_format(idea.description) %></h3>
+    	<h4 class="pull-right" >By <%= idea.author %></h4>	
     	<br>
     	<%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm pull-left', data: {confirm: "Are you sure?"} %>
       <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm pull-left' %>
