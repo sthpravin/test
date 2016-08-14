@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+#heroku
+gem 'nokogiri'
+gem 'rack', '~>1.1'
+gem 'rspec', :require => 'spec'
+
 #Use bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
@@ -13,8 +18,22 @@ gem 'will_paginate', '~> 3.0.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-#gem 'pg'
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+	gem 'byebug'
+end
+
+group :development do
+	
+	gem 'spring'
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
