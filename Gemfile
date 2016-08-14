@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #heroku
 gem 'nokogiri'
 gem 'rack', '~>1.1'
-gem 'rspec', :require => 'spec'
+#gem 'rspec', :require => 'spec'
 
 #Use bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -52,6 +52,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
