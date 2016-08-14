@@ -19,7 +19,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 
-gem 'pg'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -51,6 +51,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -61,3 +62,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
